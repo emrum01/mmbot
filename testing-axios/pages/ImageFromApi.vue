@@ -1,34 +1,22 @@
 <template>
-  <img :src="dataUrl" />
-  <form
-    action="https://www.mindmeister.com/external/show"
-    target="new"
-    method="POST"
-    enctype="multipart/form-data"
-  >
-    MindMeister File: <input type="file" name="file[content]" /> Id:
-    <input type="text" name="file[id]" value="-1" /> Name:
-    <input type="text" name="file[name]" value="some map" />
-    API Key:
-    <input
-      type="text"
-      name="api_key"
-      value="009bad31c404b966490e591540d528e8"
-    />
-    Allow export: <input type="checkbox" name="file[allow_export]" />
-  </form>
+  <div>
+    なぜ表示されないのか...
+    <img :src="dataUrl" />
+    {{ dataUrl }}
+  </div>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  name: "ImageFromApi"
-  /*
+  name: "ImageFromApi",
+
   data: function() {
     return {
-      apiUrl:
-        "https://www.mindmeister.com/api/v2/maps/1804019690.docx?votes=false&tasks=false",
+      apiUrl: "https://www.mindmeister.com/api/v2/maps/1804019690.png",
+      folderUrl22:
+        "https://www.mindmeister.com/services/rest/oath2?api_key=009bad31c404b966490e591540d528e8&auth_token=WPWCg1QVXJEBRIQcJHg7&folder_id=1681651&method=mm.folders.contents&response_format=xml&api_sig=2ccc05e9642320d7fe946b414384229b",
       dataUrl: ""
     };
   },
@@ -46,8 +34,9 @@ export default {
         const prefix = `data:${response.headers["content-type"]};base64,`;
         const base64 = new Buffer(response.data, "binary").toString("base64");
         this.dataUrl = prefix + base64;
-      });
+        console.log(this.dataUrl);
+      })
+      .catch(e => console.error(e));
   }
-  */
 };
 </script>

@@ -1,9 +1,9 @@
 import axios from "axios";
 
-    
-var apiUrl = "https://www.mindmeister.com/api/v2/maps/1804019690.docx?votes=false&tasks=false"
-var dataUrl = "";
-axios
+export const getImage = ()=> {
+  const apiUrl = "https://www.mindmeister.com/api/v2/maps/1804019690.jpeg"
+  let dataUrl = "";
+  axios
   .get(apiUrl, {
     responseType: "arraybuffer",
     headers: {
@@ -16,6 +16,7 @@ axios
     const prefix = `data:${response.headers["content-type"]};base64,`;
     const base64 = new Buffer(response.data, "binary").toString("base64");
     dataUrl =  prefix + base64;
-  });
-
-
+    return dataUrl;
+  })
+  .catch(e=>console.error(e))
+}

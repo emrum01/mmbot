@@ -1,12 +1,12 @@
 //import { hello } from "./sub";
 //import {doPost} from "./bot";
 //import dayjs from "dayjs";
-
+import {getImage}from "./api.js";
 // sub.jsに定義されたJavaScriptを実行する。
 var ACCESS_TOKEN = 'gVUmALJHSj2eFKOh6/GEUnFMYsYlppwmmeYjCNE8vf6SV6sUHXz4+scRCevRaSaH3oO/YzLLR74gWTqD/leMoXKEDMvnaS3ZO626es+52iHIT39TD+ErIT60XP1PRCGGoTiMQhindMUecv308A+F6QdB04t89/1O/w1cDnyilFU=';
 
 function doPost(e) {
-    
+    var dataUrl = getImage();
     var post_json = JSON.parse(e.postData.contents);
     var reply_token = post_json.events[0].replyToken;
     if (typeof reply_token === 'undefined') {
@@ -28,8 +28,8 @@ function doPost(e) {
         "messages" : [
           {
             'type':'image',
-            'originalContentUrl':'https://drive.google.com/uc?id=1ENy_kq0ar21uWQj8-SPwSiZMFjyGgY1y',
-            'previewImageUrl':'https://drive.google.com/uc?id=1ENy_kq0ar21uWQj8-SPwSiZMFjyGgY1y'
+            'originalContentUrl': dataUrl,
+            'previewImageUrl':dataUrl
           }
         ]
       };
