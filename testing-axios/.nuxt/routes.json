@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ImageFromApi",
+    "path": "/ImageFromApi",
+    "component": "/home/imuramu5/inventions/testing-axios/pages/ImageFromApi.vue",
+    "chunkName": "pages/ImageFromApi",
+    "_name": "_0c5aaa4d"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/imuramu5/inventions/testing-axios/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1bc386ec"
+  }
+]
