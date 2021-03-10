@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{290:function(e,n,t){"use strict";t.r(n);t(219);var r={name:"ImageFromApi"},l=t(28),component=Object(l.a)(r,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("img",{attrs:{src:e.dataUrl}})}),[],!1,null,null,null);n.default=component.exports}}]);

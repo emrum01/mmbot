@@ -4,8 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0c5aaa4d = () => interopDefault(import('../pages/ImageFromApi.vue' /* webpackChunkName: "pages/ImageFromApi" */))
-const _1bc386ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _77141bf5 = () => interopDefault(import('../pages/ImageFromApi.vue' /* webpackChunkName: "pages/ImageFromApi" */))
+const _5c2119b2 = () => interopDefault(import('../pages/test.vue' /* webpackChunkName: "pages/test" */))
+const _40d7d7e2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -20,11 +21,15 @@ export const routerOptions = {
 
   routes: [{
     path: "/ImageFromApi",
-    component: _0c5aaa4d,
+    component: _77141bf5,
     name: "ImageFromApi"
   }, {
+    path: "/test",
+    component: _5c2119b2,
+    name: "test"
+  }, {
     path: "/",
-    component: _1bc386ec,
+    component: _40d7d7e2,
     name: "index"
   }],
 

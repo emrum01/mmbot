@@ -2,15 +2,22 @@
   {
     "name": "ImageFromApi",
     "path": "/ImageFromApi",
-    "component": "/home/imuramu5/inventions/testing-axios/pages/ImageFromApi.vue",
+    "component": "/home/imuramu5/inventions/mmbot/testing-axios/pages/ImageFromApi.vue",
     "chunkName": "pages/ImageFromApi",
-    "_name": "_0c5aaa4d"
+    "_name": "_77141bf5"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "/home/imuramu5/inventions/mmbot/testing-axios/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_5c2119b2"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/imuramu5/inventions/testing-axios/pages/index.vue",
+    "component": "/home/imuramu5/inventions/mmbot/testing-axios/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_1bc386ec"
+    "_name": "_40d7d7e2"
   }
 ]
