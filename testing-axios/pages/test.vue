@@ -18,16 +18,21 @@ export default {
     return {
       folderUrl:
         "https://www.mindmeister.com/services/rest/oauth2?method=mm.maps.getList",
-      authUrl: "https://www.mindmeister.com/oauth2/authorize"
+      authUrl: "https://www.mindmeister.com/oauth2/token"
     };
   },
   mounted() {
     axios
-      .get(this.authUrl, {
-        client_id: "v76DlXE6yUR4168279-2126sKe8TDOvxtRiN34OlQGc",
-        scope: "userprofile.email%20mindmeister",
-        redirect_uri: "https://mmbot-kappa.vercel.app/test",
-        response_type: "code"
+      .post(this.authUrl, {
+        params: {
+          scopes: ["mindmeister", "userinfo.email"],
+          code: "fDmODa2Hn52e2tbiH4KobH4WETIPe4mzL_DaFUzlr8Q",
+          client_id: "v76DlXE6yUR4168279-2126sKe8TDOvxtRiN34OlQGc",
+          client_secret: "AKUGm3JGyIG1ZgpD8xQfbvJo3-KN5C_9Rkc8pQbhQLA",
+          redirect_uri:
+            "https://mmbot-kappa.vercel.app/test?code=J178skZt2dfSGVcEZNhD2aqbiqFIYJKtjM45_NeRDsM",
+          grant_type: "authorization_code"
+        }
       })
       .then(response => console.log(response.data))
       .catch(e => console.error(e));
