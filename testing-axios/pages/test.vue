@@ -18,7 +18,19 @@ export default {
     return {
       folderUrl:
         "https://www.mindmeister.com/services/rest/oauth2?method=mm.maps.getList"
+      authUrl:
+        "https://www.mindmeister.com/oauth2/authorize"
     };
+  },
+  mounted() {
+    axios.get(authUrl,{
+      client_id:'v76DlXE6yUR4168279-2126sKe8TDOvxtRiN34OlQGc',
+      scope:'userprofile.email%20mindmeister',
+      redirect_uri:'https://mmbot-kappa.vercel.app/test',
+      response_type: 'code'
+    })
+    .then(response => console.log(response.data))
+    .catch(e => console.error(e));
   },
   methods: {
     // カウントをリセットします
@@ -45,6 +57,8 @@ export default {
         */
       };
       return axios.get(this.folderUrl, {
+        scope: 'mindmeister',
+        redirect_uri: 'localhost:3000',
         responseType: "document", //'document'はブラウザ環境以外ではtextと同じ
         headers: {
           Authorization:
