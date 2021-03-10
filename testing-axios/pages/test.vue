@@ -23,7 +23,7 @@ export default {
   },
   mounted() {
     axios
-      .get(authUrl, {
+      .get(this.authUrl, {
         client_id: "v76DlXE6yUR4168279-2126sKe8TDOvxtRiN34OlQGc",
         scope: "userprofile.email%20mindmeister",
         redirect_uri: "https://mmbot-kappa.vercel.app/test",
