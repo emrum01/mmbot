@@ -1,0 +1,24 @@
+{
+  "name": "mmbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrum01/mmbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emrum01/mmbot/issues"
+  },
+  "homepage": "https://github.com/emrum01/mmbot#readme",
+  "dependencies": {
+    "eslint": "^7.24.0",
+    "npm": "^7.10.0",
+    "prettier": "^2.2.1"
+  }
+}
