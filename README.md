@@ -2,8 +2,9 @@
 
 ### マインドマップのリマインドアプリ
 
-mindmeister(https://www.mindmeister.com/)
+マインドマップ作製ツールであるmindmeister(https://www.mindmeister.com/)
 に作成したマインドマップの画像を忘れそうなタイミングでlineに送信してくれます
+
 <img src="https://user-images.githubusercontent.com/44839683/116106236-02d67080-a6ed-11eb-85c3-d1f077577a3a.jpg" width="320">
 
 <img src="https://user-images.githubusercontent.com/44839683/116106441-0f5ac900-a6ed-11eb-9898-046d83d57d12.jpg" width="320">
@@ -15,7 +16,7 @@ mindmeister(https://www.mindmeister.com/)
 
 **使用する場合は以下の手順から再現できると思います。**
 
-1. mindmeisterのアカウントを作ったうえで(有料かもしれません)、以下のURLのページの手順に従ってapiトークンを取得
+1. mindmeisterのアカウントを作ったうえで、以下のURLのページの手順に従ってapiトークンを取得
 https://developers.mindmeister.com/docs/basic-steps
 
 2. line messaging apiでボット作成、`チャンネルアクセストークン`を控えておく
